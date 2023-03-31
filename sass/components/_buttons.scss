@@ -5,29 +5,31 @@
   display: inline-flex;
   cursor: pointer;
   text-decoration: none;
-  text-transform: uppercase;
   line-height: 1;
   border: 0;
   transition: 275ms ease;
-  padding: 1.125em 2em;
   font-weight: $fw-700;
 
-  &[data-type='accent'] {
-    background-color: clr(primary, 400);
-    color: clr(neutral, 900);
+  &[data-type='switcher'] {
+    text-transform: uppercase;
+    background-color: transparent;
+    color: clr(neutral, 700);
+    letter-spacing: 2.5px;
+
+    &:is(:hover, :focus) {
+      color: clr(primary, 600);
+    }
   }
 
-  &[data-type='outline'] {
-    --outline-size: 5px;
-
-    background: transparent;
-    outline: var(--outline-size) solid clr(neutral, 100);
-    outline-offset: calc(var(--outline-size) * -1);
+  &[data-type='search'] {
+    background: clr(primary, 400);
+    padding-block: 12.5px;
+    padding-inline: size(16);
     color: clr(neutral, 100);
-  }
+    border-radius: size(10);
 
-  &:is(:hover, :focus) {
-    background-color: clr(neutral, 100);
-    color: clr(neutral, 900);
+    &:is(:hover, :focus) {
+      background-color: clr(primary, 300);
+    }
   }
 }
