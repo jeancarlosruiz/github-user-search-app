@@ -24,7 +24,7 @@
   }
 
   &[data-type='search'] {
-    // background: clr(primary, 400);
+    background: var(--search-btn-bg);
     padding-block: 12.5px;
     padding-inline: size(16);
     color: var(--search-btn-clr);
@@ -35,9 +35,3 @@
     // }
   }
 }
-
-// @media (prefers-color-scheme: dark) {
-//   .button[data-type='switcher'] {
-//     color: clr(neutral, 100);
-//   }
-// }

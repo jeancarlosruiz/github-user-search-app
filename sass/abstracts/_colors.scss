@@ -1,23 +1,5 @@
 // Incluye un sass map donde podremos nombrar y crear variables personalizadas en cada proyecto.
 
-// $colors: (
-//   neutral: (
-//     900: hsl(220, 40%, 13%),
-//     800: hsl(217, 21%, 21%),
-//     700: hsl(217, 35%, 45%),
-//     600: hsl(217, 20%, 51%),
-//     400: hsl(227, 100%, 98%),
-//     200: hsl(0, 0%, 100%),
-//     100: hsl(0, 0%, 100%),
-//   ),
-//   primary: (
-//     300: hsla(212, 100%, 50%, 0.5),
-//     400: hsl(212, 100%, 50%),
-//     500: hsl(222, 41%, 20%),
-//     600: hsla(220, 18%, 16%, 1),
-//   ),
-// );
-
 :root {
   --body-bg: hsl(227, 100%, 98%);
   --logo-clr: hsla(220, 18%, 16%, 1);
@@ -26,7 +8,7 @@
   --search-btn-clr: hsl(0, 0%, 100%);
   --switcher-clr: hsl(217, 35%, 45%);
   --paragraph-clr: hsl(217, 35%, 45%);
-  --search-btn-clr: hsl(212, 100%, 50%);
+  --search-btn-bg: hsl(212, 100%, 50%);
   --profile-name-clr: hsl(217, 21%, 21%);
   --username-at-clr: hsl(212, 100%, 50%);
   --joined-date: hsl(217, 20%, 51%);
@@ -37,25 +19,6 @@
   --translateX: translateX(15%);
 }
 
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --body-bg: hsl(220, 40%, 13%);
-//     --profile-bg: hsl(222, 41%, 20%);
-//     --search-bg: var(--profile-bg);
-//     --logo-clr: var(--paragraph-clr);
-//     --switcher-clr: var(--paragraph-clr);
-//     --paragraph-clr: hsl(0, 0%, 100%);
-//     --search-btn-clr: hsl(212, 100%, 50%);
-//     --profile-name-clr: var(--paragraph-clr);
-//     --username-at-clr: hsl(212, 100%, 50%);
-//     --joined-date: var(--paragraph-clr);
-//     --user-statistics: hsl(217, 21%, 21%);
-//     --user-profile: var(--paragraph-clr);
-//     --user-profile-bg: hsl(220, 40%, 13%);
-//     --icon-fill: var(--paragraph-clr);
-//   }
-// }
-
 :root[data-theme='dark'] {
   --body-bg: hsl(220, 40%, 13%);
   --profile-bg: hsl(222, 41%, 20%);
@@ -63,7 +26,7 @@
   --logo-clr: var(--paragraph-clr);
   --switcher-clr: var(--paragraph-clr);
   --paragraph-clr: hsl(0, 0%, 100%);
-  --search-btn-clr: hsl(212, 100%, 50%);
+  --search-btn-bg: hsl(212, 100%, 50%);
   --profile-name-clr: var(--paragraph-clr);
   --username-at-clr: hsl(212, 100%, 50%);
   --joined-date: var(--paragraph-clr);
