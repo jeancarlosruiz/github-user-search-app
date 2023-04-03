@@ -5,7 +5,7 @@
   display: inline-flex;
   cursor: pointer;
   text-decoration: none;
-  line-height: 1;
+  line-height: 1.5;
   border: 0;
   transition: 275ms ease;
   font-weight: $fw-700;
@@ -17,21 +17,15 @@
     letter-spacing: 2.5px;
     align-items: center;
     gap: size(16);
-
-    // &:is(:hover, :focus) {
-    //   color: clr(primary, 600);
-    // }
+    font-size: fs(100);
   }
 
   &[data-type='search'] {
     background: var(--search-btn-bg);
-    padding-block: 12.5px;
+    padding-block: 0.781rem;
     padding-inline: size(16);
     color: var(--search-btn-clr);
     border-radius: size(10);
-
-    // &:is(:hover, :focus) {
-    //   background-color: clr(primary, 300);
-    // }
+    justify-content: center;
   }
 }

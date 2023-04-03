@@ -2,8 +2,11 @@
 /////////////////////////
 // SELECTING ELEMENTS //
 ///////////////////////
-const btn = document.querySelector('.button');
 const htmlEl = document.querySelector('html');
+const btn = document.querySelector('.button');
+const form = document.querySelector('.form');
+const input = document.querySelector('.username-ipt');
+const error = document.querySelector('.error-message');
 const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 let scheme = document.querySelector('.scheme');
 
@@ -37,6 +40,25 @@ function toggleTheme() {
 ///////////////////////////
 
 btn.addEventListener('click', toggleTheme);
+
+// Form addeventlistener
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const username = input.value;
+
+  fetch(`https://api.github.com/users/${username}`)
+    .then(response => {
+      if (!response.ok) {
+        error.textContent = 'No results';
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log(data);
+      input.value = '';
+    });
+});
 
 window.addEventListener('load', () => {
   // If the page load and there is not preferences to dark mode set it light by default

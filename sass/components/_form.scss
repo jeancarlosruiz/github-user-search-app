@@ -1,0 +1,38 @@
+@use '../abstracts/' as *;
+
+.form {
+  padding-block: size(8);
+  padding-inline-end: size(8);
+  padding-inline-start: size(16);
+  background-color: var(--search-bg);
+  border-radius: size(15);
+  margin-block-start: size(36);
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: size(8);
+  }
+
+  .username-ipt {
+    width: 100%;
+    background-color: inherit;
+    color: var(--paragraph-clr);
+    border: transparent;
+    outline: none;
+    font-size: fs(200);
+  }
+}
+
+.error-message {
+  color: var(--error-message-clr);
+  font-size: size(15);
+  justify-self: center;
+  grid-column: 1 / -1;
+  grid-row: 2 / -1;
+
+  @include mq(medium) {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+  }
+}

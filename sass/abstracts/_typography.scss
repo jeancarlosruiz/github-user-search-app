@@ -14,8 +14,10 @@ $font-sizes: (
   500: 1.625rem,
   400: 1.125rem,
   300: 1rem,
+  // input size from 13 to 18 big screen
+  200: clamp(0.8125rem, 0.6122rem + 0.8547vw, 1.125rem),
   // switcher btn 13px all devices.
-  200: 0.813rem,
+  100: 0.813rem,
 );
 
 //Font-weights
