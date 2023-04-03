@@ -1,0 +1,40 @@
+@use '../abstracts/' as *;
+
+header {
+  margin-block-start: 1.938rem;
+  .logo {
+    color: var(--logo-clr);
+  }
+}
+
+.wrapper {
+  background-color: hsl(217, 35%, 45%);
+  padding: 0.5rem 0.7rem;
+  border-radius: size(10);
+  position: relative;
+
+  & svg {
+    z-index: 1;
+  }
+
+  &::before {
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    background-color: hsl(212, 100%, 50%);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    transform: var(--translateX);
+    transition: 275ms ease;
+  }
+}
+
+// @media (prefers-color-scheme: dark) {
+//   header {
+//     .logo {
+//       color: var(--logo-clr);
+//     }
+//   }
+// }

@@ -4,6 +4,14 @@ body {
   font-family: $ff-base;
   font-weight: $fw-400;
   font-size: fs(400);
-  color: clr(neutral, 400);
+  color: var(--paragraph-clr);
+  background-color: var(--body-bg);
   line-height: 1.5;
 }
+
+// @media (prefers-color-scheme: dark) {
+//   body {
+//     color: clr(neutral, 100);
+//     background-color: clr(neutral, 900);
+//   }
+// }

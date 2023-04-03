@@ -4,8 +4,12 @@
 
 .flex-group-1 {
   display: flex;
-  flex-wrap: wrap;
-  column-gap: var(--flex-column-gap, $flex-group-gap);
-  row-gap: var(--flex-row-gap, calc($flex-group-gap) / 2);
-  width: fit-content;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-group-2 {
+  display: flex;
+  gap: size(14);
+  align-items: center;
 }

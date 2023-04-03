@@ -4,13 +4,13 @@
 @use 'sizes' as *;
 
 // Con esta funcion podemos obtener los colores creados en nuestro colors partial
-@function clr($color, $shade) {
-  @if map.has-key($colors, $color, $shade) {
-    @return map.get($colors, $color, $shade);
-  } @else {
-    @error '$colors does not have that color!';
-  }
-}
+// @function clr($color, $shade) {
+//   @if map.has-key($colors, $color, $shade) {
+//     @return map.get($colors, $color, $shade);
+//   } @else {
+//     @error '$colors does not have that color!';
+//   }
+// }
 
 // Funcion creada para colocar font size personalizadas en cada proyecto.
 @function fs($font-size) {

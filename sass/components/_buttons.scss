@@ -13,23 +13,31 @@
   &[data-type='switcher'] {
     text-transform: uppercase;
     background-color: transparent;
-    color: clr(neutral, 700);
+    color: var(--switcher-clr);
     letter-spacing: 2.5px;
+    align-items: center;
+    gap: size(16);
 
-    &:is(:hover, :focus) {
-      color: clr(primary, 600);
-    }
+    // &:is(:hover, :focus) {
+    //   color: clr(primary, 600);
+    // }
   }
 
   &[data-type='search'] {
-    background: clr(primary, 400);
+    // background: clr(primary, 400);
     padding-block: 12.5px;
     padding-inline: size(16);
-    color: clr(neutral, 100);
+    color: var(--search-btn-clr);
     border-radius: size(10);
 
-    &:is(:hover, :focus) {
-      background-color: clr(primary, 300);
-    }
+    // &:is(:hover, :focus) {
+    //   background-color: clr(primary, 300);
+    // }
   }
 }
+
+// @media (prefers-color-scheme: dark) {
+//   .button[data-type='switcher'] {
+//     color: clr(neutral, 100);
+//   }
+// }
