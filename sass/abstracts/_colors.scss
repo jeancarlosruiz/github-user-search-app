@@ -13,11 +13,12 @@
   --username-at-clr: hsl(212, 100%, 50%);
   --joined-date: hsl(217, 20%, 51%);
   --user-statistics: hsl(217, 21%, 21%);
-  --user-profile-bg: hsl(227, 100%, 98%);
+  --user-data-bg: hsl(227, 100%, 98%);
   --user-profile: hsl(217, 35%, 45%);
   --icon-fill: hsl(217, 35%, 45%);
   --translateX: translateX(15%);
   --error-message-clr: hsla(0, 91%, 62%, 1);
+  --svg-bg: hsl(217, 35%, 45%);
 }
 
 :root[data-theme='dark'] {
@@ -33,7 +34,8 @@
   --joined-date: var(--paragraph-clr);
   --user-statistics: hsl(217, 21%, 21%);
   --user-profile: var(--paragraph-clr);
-  --user-profile-bg: hsl(220, 40%, 13%);
+  --user-data-bg: hsl(220, 40%, 13%);
   --icon-fill: var(--paragraph-clr);
   --translateX: translateX(120%);
+  --svg-bg: hsl(0, 0%, 100%);
 }

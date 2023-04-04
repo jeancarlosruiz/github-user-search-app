@@ -6,7 +6,19 @@ const htmlEl = document.querySelector('html');
 const btn = document.querySelector('.button');
 const form = document.querySelector('.form');
 const input = document.querySelector('.username-ipt');
-const error = document.querySelector('.error-message');
+const img = document.querySelector('.profile-img');
+const username = document.querySelector('.profile-name');
+const tagName = document.querySelector('.tag-name');
+const joinDate = document.querySelector('.joined-date');
+const bioDescription = document.querySelector('.user-bio');
+const repos = document.querySelector('.repos');
+const followers = document.querySelector('.followers');
+const following = document.querySelector('.following');
+const location = document.querySelector('.location');
+const blogUrl = document.querySelector('.blog-url');
+const twitterUsername = document.querySelector('.twitter-username');
+const company = document.querySelector('.company');
+const errorMessage = document.querySelector('.error-message');
 const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 let scheme = document.querySelector('.scheme');
 
@@ -35,6 +47,59 @@ function toggleTheme() {
   }
 }
 
+// Getting format date "Joined 25 Jan 2011"
+const formatDate = function (dateInput) {
+  const dateOnly = dateInput.slice(0, 10);
+  const date = new Date(dateOnly);
+  const options = { year: 'numeric', month: 'short', day: 'numeric' };
+  const finalDate = `Joined ${date.toLocaleDateString('en-GB', options)}`;
+
+  return finalDate;
+};
+
+// Looking for availability
+const availability = function (dataAvailability) {
+  // If the data is false "Not available" or data
+  return !dataAvailability ? 'Not available' : dataAvailability;
+};
+
+// Getting data user
+const userData = function (data) {
+  img.src = data.avatar_url;
+  username.textContent = data.name;
+  tagName.textContent = `@${data.login}`;
+  joinDate.textContent = formatDate(data.created_at);
+  bioDescription.textContent = data.bio;
+  repos.textContent = data.public_repos;
+  followers.textContent = data.followers;
+  following.textContent = data.following;
+  location.textContent = availability(data.location);
+  blogUrl.textContent = availability(data.blog);
+  blogUrl.href = data.blog;
+  twitterUsername.textContent = availability(data.twitter_username);
+  company.textContent = availability(data.company);
+  input.value = '';
+  errorMessage.textContent = '';
+};
+
+// Getting data user from input
+const userDataInput = async function (userInput) {
+  try {
+    const resUser = await fetch(`https://api.github.com/users/${userInput}`);
+    if (!resUser.ok) {
+      errorMessage.textContent = 'Not results';
+      input.value = '';
+      throw new Error('Something went wrong through the process.');
+    }
+    const user = await resUser.json();
+    userData(user);
+  } catch (err) {
+    console.error('There is an error in the request:', err);
+  }
+};
+
+userDataInput('octocat');
+
 /////////////////////////////
 // ADDEVENT FUNCTIONALITIES //
 ///////////////////////////
@@ -42,22 +107,9 @@ function toggleTheme() {
 btn.addEventListener('click', toggleTheme);
 
 // Form addeventlistener
-form.addEventListener('submit', function (e) {
+form.addEventListener('submit', e => {
   e.preventDefault();
-
-  const username = input.value;
-
-  fetch(`https://api.github.com/users/${username}`)
-    .then(response => {
-      if (!response.ok) {
-        error.textContent = 'No results';
-      }
-      return response.json();
-    })
-    .then(data => {
-      console.log(data);
-      input.value = '';
-    });
+  userDataInput(input.value);
 });
 
 window.addEventListener('load', () => {

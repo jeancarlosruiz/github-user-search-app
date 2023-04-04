@@ -1,0 +1,47 @@
+@use '../abstracts/' as *;
+
+.user-container {
+  padding-block-start: size(32);
+  padding-block-end: size(48);
+  padding-inline: size(24);
+  background-color: var(--search-bg);
+  border-radius: size(15);
+  //   width: 100%;
+
+  .user-bio {
+    margin-block-start: size(32);
+  }
+  .user-data {
+    margin-block-start: size(24);
+  }
+  .contact-data {
+    margin-block-start: size(24);
+  }
+
+  @include mq(medium) {
+    .user-bio {
+      margin-block-start: size(24);
+    }
+    .user-data {
+      margin-block-start: size(32);
+    }
+    .contact-data {
+      margin-block-start: size(30);
+    }
+  }
+}
+
+.profile-img {
+  width: size(70);
+  height: size(70);
+  border-radius: 50%;
+
+  @include mq(medium) {
+    width: size(116);
+    height: size(116);
+  }
+}
+
+.tag-name {
+  color: var(--username-at-clr);
+}

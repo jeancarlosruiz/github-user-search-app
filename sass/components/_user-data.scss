@@ -1,0 +1,10 @@
+@use '../abstracts/' as *;
+
+.user-data {
+  background-color: var(--user-data-bg);
+  border-radius: size(10);
+  padding-block: size(18);
+  padding-inline: size(15);
+  text-align: center;
+  font-size: fs(400);
+}

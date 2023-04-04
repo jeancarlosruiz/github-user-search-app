@@ -1,0 +1,23 @@
+@use '../abstracts/' as *;
+
+// .user-grid {
+//   display: grid;
+//   grid-template-columns: 1fr;
+
+//   @include mq(medium) {
+//     grid-template-columns: repeat(2, 1fr);
+//   }
+// }
+
+// .grid {
+//   display: grid;
+//   grid-template-columns: 1fr;
+
+//   @include mq(large) {
+//     grid-template-columns: repeat(2, 1fr);
+
+//     p {
+//       grid-column: 2 / 3;
+//     }
+//   }
+// }
