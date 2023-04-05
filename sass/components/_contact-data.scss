@@ -7,13 +7,6 @@
   gap: size(16);
   font-size: fs(300);
 
-  //   Cambiar a flex-group al final
-  div {
-    display: flex;
-    align-items: center;
-    gap: size(12);
-  }
-
   svg > path,
   g {
     fill: var(--svg-bg);
@@ -23,9 +16,5 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: size(20);
-
-    div {
-      gap: size(20);
-    }
   }
 }

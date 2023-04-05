@@ -25,3 +25,13 @@
   align-items: center;
   justify-content: space-evenly;
 }
+
+.flex-group-5 {
+  display: flex;
+  align-items: center;
+  gap: size(12);
+
+  @include mq(medium) {
+    gap: size(20);
+  }
+}

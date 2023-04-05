@@ -98,7 +98,8 @@ const userDataInput = async function (userInput) {
   }
 };
 
-userDataInput('octocat');
+// My github account as default account :)
+userDataInput('jeancarlosruiz');
 
 /////////////////////////////
 // ADDEVENT FUNCTIONALITIES //
@@ -116,11 +117,12 @@ window.addEventListener('load', () => {
   // If the page load and there is not preferences to dark mode set it light by default
   if (!mediaQuery.matches) {
     htmlEl.dataset.teme = 'light';
-    // If data-theme is equal to light btn text content = Dark
+    // If data-theme is equal to light, btn text content = Dark
     scheme.textContent = 'Dark';
-  } else {
+  }
+  if (mediaQuery.matches) {
     htmlEl.dataset.theme = 'dark';
-    // If data-theme is equal to dark btn text content = Light
+    // If data-theme is equal to dark, btn text content = Light
     scheme.textContent = 'Light';
   }
 });

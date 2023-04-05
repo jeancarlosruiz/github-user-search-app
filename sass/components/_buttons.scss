@@ -18,6 +18,10 @@
     align-items: center;
     gap: size(16);
     font-size: fs(100);
+
+    &:is(:hover) {
+      color: var(--switcher-clr-hover);
+    }
   }
 
   &[data-type='search'] {
@@ -27,5 +31,9 @@
     color: var(--search-btn-clr);
     border-radius: size(10);
     justify-content: center;
+
+    &:is(:hover) {
+      background-color: var(--search-btn-bg-hover);
+    }
   }
 }

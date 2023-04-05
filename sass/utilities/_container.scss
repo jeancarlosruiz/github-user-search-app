@@ -3,8 +3,4 @@
 .container {
   width: calc(100% - #{size(48)});
   max-width: $container-max-width;
-
-  @include mq(medium) {
-    width: calc(100% - #{size(195)});
-  }
 }
