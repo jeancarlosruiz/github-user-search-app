@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Click Here](https://github.com/jeancarlosruiz/github-user-search-app)
-- Live Site URL: [Click Here](https://your-live-site-url.com)
+- Live Site URL: [Click Here](https://jeancarlosruiz.github.io/github-user-search-app/)
 
 ## My process
 
