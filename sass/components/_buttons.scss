@@ -2,7 +2,6 @@
 
 .button {
   // Some default removed from the btn.
-  display: inline-flex;
   cursor: pointer;
   text-decoration: none;
   line-height: 1.5;
@@ -11,10 +10,11 @@
   font-weight: $fw-700;
 
   &[data-type='switcher'] {
+    display: inline-flex;
     text-transform: uppercase;
     background-color: transparent;
     color: var(--switcher-clr);
-    letter-spacing: 2.5px;
+    letter-spacing: 0.156rem;
     align-items: center;
     gap: size(16);
     font-size: fs(100);
@@ -30,7 +30,6 @@
     padding-inline: size(16);
     color: var(--search-btn-clr);
     border-radius: size(10);
-    justify-content: center;
 
     &:is(:hover) {
       background-color: var(--search-btn-bg-hover);

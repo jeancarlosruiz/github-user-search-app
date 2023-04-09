@@ -3,17 +3,11 @@
 .form {
   padding-block: size(8);
   padding-inline-end: size(8);
-  padding-inline-start: size(16);
+  padding-inline-start: size(14);
   background-color: var(--search-bg);
   border-radius: size(15);
   margin-block-start: size(36);
   margin-block-end: size(16);
-
-  div {
-    display: flex;
-    align-items: center;
-    gap: size(8);
-  }
 
   .username-ipt {
     width: 100%;

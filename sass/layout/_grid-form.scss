@@ -2,7 +2,6 @@
 
 .grid-form {
   --column-gap: 0.438rem;
-  //   --row-gap: #{size(8)};
 
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -10,7 +9,6 @@
   column-gap: var(--column-gap, $grid-group-gap);
   align-items: center;
   justify-content: center;
-  //   row-gap: var(--row-gap, $grid-group-gap);
 
   @include mq(medium) {
     grid-template-columns: 2fr 1fr 1fr;
